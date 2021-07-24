@@ -201,6 +201,15 @@ client.connect(err => {
   })
 
 
+  // User Specific Requests
+  app.get('/userSpecificRequests', (req, res) => {
+    donationRequestCollection.find({ email: req.query.email })
+      .toArray((err, items) => {
+        res.send(items);
+      })
+  })
+
+
 
   // Add New Donation Request
   app.post('/newDonationRequest', (req, res) => {
@@ -210,6 +219,7 @@ client.connect(err => {
         res.send(result.insertedCount > 0);
       })
   })
+
 
 
   // Delete Donation Request
