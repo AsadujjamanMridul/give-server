@@ -1,4 +1,8 @@
-# Give
+<h1 align="center">
+  <img src="screenshots/logo.svg" width="35" height="35" style="margin-right: 10px"/> Give 
+</h1>
+
+
 #### Donate For a Good Cause
 
 A non-profit organization for to spread humanity and kindness among the poor community of our country.
