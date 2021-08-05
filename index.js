@@ -89,6 +89,14 @@ client.connect(err => {
       })
   })
 
+  // Check Volunteer
+  app.get('/isVolunteer', (req, res) => {
+    volunteersCollection.find({ email: req.query.email })
+      .toArray((err, volunteer) => {
+        res.send(volunteer)
+      })
+  })
+
   // New Volunteer Request
   app.post('/newVolunteerRequest', (req, res) => {
     const newVolunteerReq = req.body;
